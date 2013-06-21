@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!--
+  Ryan Cantone
+  6-17-2013
+  Project 3
+  VFW 1306
+-->
+
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta description= "This is an app for registering weapons." />
+        <meta keywords="hero, party, adventure"
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="user-scalable=no, width=device-width" />
+        <meta name="viewport" content="target-densitydpi=device-dpi" />
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320" />
+        <title>Add Hero Element.</title>
+        <link rel="stylesheet" href="additemstyle.css" type="text/css" />
+    </head>
+    <body>
+        <h1>Character Design</h1>
+        <nav>
+            <a href = "#" id = "clearData">Clear Party</a>
+            <a href = "#" id = "displayData">Show Party</a>
+            <a href = "additem.html" id = "addNew" style = "display: none;" >Add New Character</a>
+        </nav>
+        <form action="#" method="post" id = "heroForm">
+           
+            <fieldset>
+                <legend>Hero Details</legend>
+                <span> * Fields are required.</span>
+                <ul id="errors"></ul>
+                <ul id="fields">
+                    <li>
+                        <label for="wn">*Hero Name:</label><input type="text" id="wn"/>
+                    </li>
+                    <li id="select"><label for="weapon">*Hero Class:</label><br /></li>
+                    <li><!--*-->Gender?:
+                        <ul>
+                            <li><input type="radio" value="Yes" id="yes"  name="deadly" /><label for="yes">Male</label></li>
+                            <li><input type="radio" value="No" id="no"  name="deadly" /><label for="no">Female</label></li>
+                            <li><input type="radio" value="Unknown" id="unknown"  name="deadly" /><label for="unknown">Unknown</label></li>
+                        </ul>
+                    </li>
+                    <li>Is this the party leader?</li>
+                    <li><input type="checkbox" id="fav" value="Yes" class = "checkbox" /><label for="fav">Yes</label></li>
+                    <li>
+                        <label for="weapon">Age</label>
+                        <input type="range" min="18" max="100" id="weapon" type="range">
+                    </li>
+                    <li>
+                        <span><label for="comments">Other details?:</label></span><textarea id="comments"></textarea>
+                    </li>
+                    <li>
+                        <label for="date">*Joined the party:</label><input type="date" min="#" max="#" id="date" name="date">
+                    </li>
+                </ul>
+            </fieldset>
+            <input type = "submit" value = "Add Character" id = "saveData"/>
+
+        </form>
+    <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
